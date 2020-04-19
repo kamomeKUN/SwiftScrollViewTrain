@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift5ScrollViewTrain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-uU-JyB">
+                                <rect key="frame" x="0.0" y="44" width="375" height="579"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-77-cDu" userLabel="contentsView">
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="1200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StayHome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6n-p9-cIc">
+                                                <rect key="frame" x="287.5" y="572.5" width="225" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="2TP-ad-Vgo"/>
+                                                    <constraint firstAttribute="width" constant="225" id="81I-N1-h8O"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="3Je-Ov-wXP"/>
+                                            <constraint firstAttribute="width" constant="800" id="D46-IT-ebi"/>
+                                            <constraint firstItem="e6n-p9-cIc" firstAttribute="centerY" secondItem="lJd-77-cDu" secondAttribute="centerY" id="b7F-XS-wnq"/>
+                                            <constraint firstItem="e6n-p9-cIc" firstAttribute="centerX" secondItem="lJd-77-cDu" secondAttribute="centerX" id="uAg-ZA-irI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lJd-77-cDu" secondAttribute="trailing" id="Lpb-Xi-Rpj"/>
+                                    <constraint firstItem="lJd-77-cDu" firstAttribute="leading" secondItem="zyJ-uU-JyB" secondAttribute="leading" id="R2V-G9-xUQ"/>
+                                    <constraint firstItem="lJd-77-cDu" firstAttribute="top" secondItem="zyJ-uU-JyB" secondAttribute="top" id="vU7-KW-ZJk"/>
+                                    <constraint firstAttribute="bottom" secondItem="lJd-77-cDu" secondAttribute="bottom" id="vZW-rL-gF3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QzY-m3-aXa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="CKP-Ve-Ugb"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zyJ-uU-JyB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A18-fM-csw"/>
+                            <constraint firstItem="zyJ-uU-JyB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="Ob0-aT-RW6"/>
+                            <constraint firstItem="zyJ-uU-JyB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XrS-xK-EXV"/>
+                            <constraint firstItem="zyJ-uU-JyB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qPk-tx-Vtt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
