@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    let numberOfPages = 5
+    let colors: [UIColor] = [.yellow, .gray, .red, .blue, .brown]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,36 +22,41 @@ class ViewController: UIViewController {
         configureSV()
     }
     
-    func createContents() -> UIView {
+    func createPages(page: Int) -> UIView {
+        let pageView = UIView()
+        let pageSize = scrollView.frame.size
+        let positionX = pageSize.width * CGFloat(page)
+        let position = CGPoint(x: positionX, y: 0)
+        pageView.frame = CGRect(origin: position, size: pageSize)
+        pageView.backgroundColor = colors[page]
+        
+        return pageView
+    }
+    
+    func createContentsView() -> UIView {
         
         let contentsView = UIView()
         // 位置、サイズの設定
-        contentsView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 1200)
+        let contentsWidth = scrollView.frame.width * CGFloat(numberOfPages)
+        let contentsHeight = scrollView.frame.height
+        contentsView.frame = CGRect(x: 0, y: 0, width: contentsWidth, height: contentsHeight)
         
-        let label = createLabel(contentsView: contentsView)
-        contentsView.addSubview(label)
+        for i in 0 ..< numberOfPages {
+            
+            let pageView = createPages(page: i)
+            contentsView.addSubview(pageView)
+            
+        }
         
         return contentsView
         
     }
     
-    func createLabel(contentsView: UIView) -> UILabel {
-        
-        let label = UILabel()
-        
-        // 位置、大きさを設定
-        label.frame.size = CGSize(width: 255, height: 50)
-        label.center = contentsView.center
-        label.text = "StayHome"
-        label.font = UIFont.systemFont(ofSize: 30.0)
-        label.textAlignment = NSTextAlignment.center
-        
-        return label
-    }
-    
     func configureSV() {
         
-        let subView = createContents()
+        scrollView.isPagingEnabled = true
+        
+        let subView = createContentsView()
         scrollView.addSubview(subView)
         
         scrollView.contentSize = subView.frame.size
